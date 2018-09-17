@@ -13,14 +13,14 @@ properties.use_turn_restrictions         = false
 properties.continue_straight_at_waypoint = false
 properties.weight_name                   = 'duration'
 
-local walking_speed = 5
+local walking_speed = 3.6
 
 local profile = {
   default_mode            = mode.walking,
   default_speed           = walking_speed,
   oneway_handling         = 'specific',     -- respect 'oneway:foot' but not 'oneway'
-  traffic_light_penalty   = 2,
-  u_turn_penalty          = 2,
+  traffic_light_penalty   = 0,
+  u_turn_penalty          = 0,
 
   barrier_whitelist = Set {
     'cycle_barrier',
@@ -108,18 +108,18 @@ local profile = {
   },
 
   route_speeds = {
-    ferry = 5
+    ferry = walking_speed
   },
 
   bridge_speeds = {
   },
 
   surface_speeds = {
-    fine_gravel =   walking_speed*0.75,
-    gravel =        walking_speed*0.75,
-    pebblestone =   walking_speed*0.75,
-    mud =           walking_speed*0.5,
-    sand =          walking_speed*0.5
+    fine_gravel =   walking_speed,
+    gravel =        walking_speed,
+    pebblestone =   walking_speed,
+    mud =           walking_speed,
+    sand =          walking_speed
   },
 
   tracktype_speeds = {

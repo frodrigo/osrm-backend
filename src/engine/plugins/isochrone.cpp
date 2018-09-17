@@ -29,7 +29,7 @@ IsochronePlugin::HandleRequest(const std::shared_ptr<const datafacade::BaseDataF
 {
 
     // const auto range = parameters.range;
-    const auto range = 300;
+    const auto range = 500;
 
     util::Coordinate startcoord = parameters.coordinates.front();
 
